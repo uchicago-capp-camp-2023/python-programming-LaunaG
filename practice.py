@@ -146,9 +146,10 @@ def is_square(pt1, pt2, pt3, pt4):
     # NOTE: In a square, the diagonals will be the two longest
     # segments, and they will be equal.  In addition, all four
     # sides will be equal.
+    has_length = min(distances) > 0
     sides_equal = distances[0] == distances[1] == distances[2] == distances[3]
     diagonals_equal = distances[4] == distances[5]
 
-    return sides_equal and diagonals_equal
+    return has_length and sides_equal and diagonals_equal
     
 
